@@ -1,0 +1,81 @@
+server:
+  # 修改端口
+  port: 8080
+  servlet:
+    # 加入/campusstore前缀
+    context-path: /campusstore
+spring:
+  datasource:
+    type: com.mchange.v2.c3p0.ComboPooledDataSource
+    driverClass: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/campus_store?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    user: root
+    password: GEjiahao0620!
+    maxPoolSize: 30
+    minPoolSize: 10
+    autoCommmitOnClose: false
+    checkoutTimeout: 10000
+    acquireRetryAttempts: 2
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    pool:
+      maxActive: 100
+      maxIdle: 20
+      maxWait: 3000
+      testOnBorrow: true
+  thymeleaf:
+    cache: false
+    encoding: utf-8
+    prefix: classpath:/templates/html
+    suffix: .html
+    mode: HTML5
+  mvc:
+    static-path-pattern: /static/**
+
+
+mybatis:
+  type-aliases-package: com.garrison.campusstore.entity
+  mapper-locations: /mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    use-generated-keys: true
+    use-column-label: true
+kaptcha:
+  border: "no"
+  textproducer:
+    char:
+      string: ACDEFHKPRSTWX345679
+      length: 4
+    font:
+      color: red
+      size: 43
+      names: Arial
+  image:
+    width: 135
+    height: 50
+  noise:
+    color: black
+## relevant address of shop img
+shop:
+  relevant:
+    path: /upload/images/item/shop/
+## relevant address of headline img
+headline:
+  relevant:
+    path: /upload/images/item/headtitle/
+## relevant address of shop category img
+shopcategory:
+  relevant:
+    path: /upload/images/item/shopcategory/
+## relevant address of mac base path
+mac:
+  base:
+    path: /Users/jiahaoge/Personal/面试资料/项目笔记/校园商铺项目资料/imag
+## relevant address of win base path
+win:
+  base:
+    path: D:/projectdev/image
+
+
+
