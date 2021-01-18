@@ -10,6 +10,8 @@ public class Area {
     private Integer areaId;
     // Name of Area
     private String areaName;
+    //desc of area
+    private String areaDesc;
     // Priority of Area
     private Integer priority;
     // Created Time
@@ -31,6 +33,13 @@ public class Area {
 
     public void setAreaName(String areaName) {
         this.areaName = areaName;
+    }
+    public String getAreaDesc() {
+        return areaDesc;
+    }
+
+    public void setAreaDesc(String areaDesc) {
+        this.areaDesc = areaDesc;
     }
 
     public Integer getPriority() {

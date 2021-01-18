@@ -39,13 +39,8 @@ $(function() {
 			success : function(data) {
 				if (data.success) {
 					$.toast('提交成功！');
-					if (usertype == 1) {
-						// 若用户在前端展示系统页面则自动退回到前端展示系统首页
-						window.location.href = '/campusstore/frontend/index';
-					} else {
-						// 若用户是在店家管理系统页面则自动回退到店铺列表页中
-						window.location.href = '/campusstore/shopadmin/shoplist';
-					}
+					window.location.href = '/campusstore/local/login';
+
 				} else {
 					$.toast('提交失败！' + data.errMsg);
 					$('#captcha_img').click();
@@ -55,6 +50,12 @@ $(function() {
 	});
 
 	$('#back').click(function() {
-		window.location.href = '/campusstore/shopadmin/shoplist';
+		if (usertype == 1) {
+			// 若用户在前端展示系统页面则自动退回到前端展示系统首页
+			window.location.href = '/campusstore/frontend/index';
+		} else {
+			// 若用户是在店家管理系统页面则自动回退到店铺列表页中
+			window.location.href = '/campusstore/shopadmin/shoplist';
+		}
 	});
 });

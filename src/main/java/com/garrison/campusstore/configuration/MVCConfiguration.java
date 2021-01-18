@@ -112,19 +112,15 @@ public class MVCConfiguration implements WebMvcConfigurer {
         // 配置拦截的路径
         shoploginIR.addPathPatterns(interceptPath);
 
-//        /** 超级管理员系统拦截部分 **/
-//        interceptPath = "/superadmin/**";
-//        // 注册拦截器
-//        InterceptorRegistration superadminloginIR = registry.addInterceptor(new SuperAdminLoginInterceptor());
-//        // 配置拦截的路径
-//        superadminloginIR.addPathPatterns(interceptPath);
-//        superadminloginIR.excludePathPatterns("/superadmin/login");
-//        superadminloginIR.excludePathPatterns("/superadmin/logincheck");
-//        superadminloginIR.excludePathPatterns("/superadmin/main");
-//        superadminloginIR.excludePathPatterns("/superadmin/top");
-//        superadminloginIR.excludePathPatterns("/superadmin/clearcache4area");
-//        superadminloginIR.excludePathPatterns("/superadmin/clearcache4headline");
-//        superadminloginIR.excludePathPatterns("/superadmin/clearcache4shopcategory");
+        /** 超级管理员系统拦截部分 **/
+        interceptPath = "/superadmin/**";
+        // 注册拦截器
+        InterceptorRegistration superadminloginIR = registry.addInterceptor(new SuperAdminLoginInterceptor());
+        // 配置拦截的路径
+        superadminloginIR.addPathPatterns(interceptPath);
+        superadminloginIR.excludePathPatterns("/superadmin/login");
+        superadminloginIR.excludePathPatterns("/superadmin/logincheck");
+
     }
 
 

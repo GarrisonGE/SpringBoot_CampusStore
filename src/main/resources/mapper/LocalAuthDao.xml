@@ -44,12 +44,9 @@
                 LEFT
                     JOIN
             tb_person_info
-                p ON l.user_id
-                =
-                     p.user_id
+                p ON l.user_id= p.user_id
         WHERE
-                l.username =
-                #{username}
+                l.username = #{username}
           AND
             l.password = #{password}
     </select>

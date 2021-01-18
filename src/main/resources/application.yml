@@ -4,6 +4,7 @@ server:
   servlet:
     # 加入/campusstore前缀
     context-path: /campusstore
+
 spring:
   datasource:
     type: com.mchange.v2.c3p0.ComboPooledDataSource
@@ -71,7 +72,7 @@ shopcategory:
 ## relevant address of mac base path
 mac:
   base:
-    path: /Users/jiahaoge/Personal/面试资料/项目笔记/校园商铺项目资料/imag
+    path: /Users/jiahaoge/Personal/面试资料/项目笔记/校园商铺项目资料/image
 ## relevant address of win base path
 win:
   base:

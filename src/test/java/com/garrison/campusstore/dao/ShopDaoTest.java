@@ -66,6 +66,7 @@ public class ShopDaoTest {
         System.out.println("areaName:" + shop.getArea().getAreaName());
     }
     @Test
+    @Ignore
     public void testQueryShopList(){
         Shop shopCondition = new Shop();
         ShopCategory childCategory = new ShopCategory();

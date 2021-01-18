@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.IOException;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -18,7 +19,7 @@ public class AreaServiceTest {
     @Autowired
     private CacheService cacheService;
     @Test
-    public void testGetAreaList(){
+    public void testGetAreaList() throws IOException {
         List<Area> areaList = areaService.getAreaList();
         Assert.assertEquals("东苑", ((Area)areaList.get(0)).getAreaName());
         AreaService var10001 = this.areaService;
